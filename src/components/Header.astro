@@ -1,10 +1,58 @@
-<header class="flex justify-between items-center py-5 w-full mx-auto px-4 xl:w-[1120px]">
-  <h1 class="hidden sm:block">Llanos.dev</h1>
-  <nav class="hidden sm:flex flex-row gap-x-10 opacity-80">
-    <a href="#top">Inicio</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#about">Acerca de</a>
-    <a href="/contact">Contacto</a>
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#top",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experience",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#projects",
+  },
+  {
+    title: "Conocimientos",
+    label: "conocimientos",
+    url: "/#skills",
+  },
+];
+---
+
+<header
+  class="fixed flex z-10 justify-center items-center w-full mx-auto mt-2 px-10"
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-800/60 ring-white/10;
+    }
+  }
+</style>
