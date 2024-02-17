@@ -1,0 +1,42 @@
+---
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      src="./luiscartoon.webp"
+      class="rounded-full shadow-lg size-16 bg-white"
+      alt="Luis"
+    />
+    <a
+      href="https://www.linkedin.com/in/luisllanoslucas/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+  >
+    Hola, soy Luis <div class="flex justify-center items-center"></div>
+  </h1>
+  <h2 class="text-xl lg:text-2xl opacity-90 text-wrap max-m-[700px]">
+    +1 año de experiencia. Desarrollador Web Frontend de Lima, Perú. Enfoque en el desarrollo de aplicaciones web centradas en el cliente.
+  </h2>
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/luisllanoslucas/">
+      <LinkedInIcon class="size-4 md:size-6" />
+      Linkedin
+    </SocialPill>
+    <SocialPill href="https://github.com/ljllanosl">
+      <GithubIcon class="size-4 md:size-6" />
+      Github
+    </SocialPill>
+  </nav>
+</div>
